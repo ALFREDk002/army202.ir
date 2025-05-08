@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Army 202</title>
+    <link rel="icon" type="image/x-icon" href="./img/202 edited.jpeg">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./contact.css"> -->
+    <style>
+        /* استایل های پایه */
+        body {
+            font-family: 'vazir-fa', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+  /* Start Footer */
+
+
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    }
+
+    .wrapper .icon {
+    position: relative;
+    background: #fff;
+    z-index: 0;
+    border-radius: 50%;
+    margin: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: -1;
+    border-radius: 50%;
+    top: 100%;
+    }
+    .wrapper .icon:hover:after {
+    animation: bg-pos 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 both;
+    animation-timing-function: ease-in-out;
+    }
+
+    .wrapper .icon:hover {
+    color: #fff;
+    overflow: unset;
+    transition: color 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: overflow-toggle 0.7s;
+    }
+
+    .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+    .wrapper .facebook::after {
+    background-color: #cd2010;
+    }
+    .wrapper .Eitta::after {
+    background-color: #cd2010;
+    }
+    .wrapper .email::after {
+    background-color: #cd2010;
+    }
+
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+    background: #cd2010;
+    color: #fff;
+    }
+
+    .wrapper .Eitta:hover .tooltip,
+    .wrapper .Eitta:hover .tooltip::before {
+    background: #cd2010;
+    color: #fff;
+    }
+
+    .wrapper .email:hover .tooltip,
+    .wrapper .email:hover .tooltip::before {
+    background: #cd2010;
+    color: #fff;
+    }
+
+    @keyframes bg-pos {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+    }
+
+    @keyframes overflow-toggle {
+    0% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: visible;
+    }
+    }
+
+    /* End footer */
+
+        /* لودر صفحه */
+        .page-loader {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: opacity 0.5s ease;
+        }
+        
+        .page-loader .logo-area {
+            width: 150px;
+            margin-bottom: 35px;
+        }
+        
+        .page-loader .logo-area img {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+            border-radius: 50%;
+        }
+        
+        .page-loader .loader {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+            margin: 15px auto;
+            animation: animloader 1s linear infinite alternate;
+        }
+        
+        @keyframes animloader {
+            0% { box-shadow: -38px -12px, -14px 0px, 14px 0px, 38px 0px; }
+            33% { box-shadow: -38px 0px, -14px -12px, 14px 0px, 38px 0px; }
+            66% { box-shadow: -38px 0px, -14px 0px, 14px -12px, 38px 0px; }
+            100% { box-shadow: -38px 0px, -14px 0px, 14px 0px, 38px -12px; }
+        }
+        
+        /* نوار پیشرفت */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background-color: red;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+        
+        /* هدر */
+        header {
+            position: sticky;
+            top: 0;
+            border-end-end-radius: 20px;
+            border-end-start-radius: 20px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0px 0px 30px rgba(77, 70, 70, 0.37);
+            border: 2px solid rgba(64, 53, 53, 0.18);
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #head0 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+        }
+        
+        #div1 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        #hm1 {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        /* محتوای اصلی */
+        .main-container {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-box {
+            background-color: rgb(247, 245, 245);
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .social-box img.eitaa-logo {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        
+        .social-box .profile-img {
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+        
+        .btn-e {
+            font-family: 'vazir-fa';
+            width: 100%;
+            max-width: 300px;
+            padding: 8px;
+            border-radius: 20px;
+            background: rgb(224, 101, 0);
+            color: white;
+            font-size: 18px;
+            border: none;
+            margin: 15px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-e:hover {
+            background-color: rgb(247, 245, 245);
+            color: black;
+            transform: translateY(-2px);
+        }
+        
+        /* بخش ادمین ها */
+        .admins-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .admin-box {
+            background-color: rgb(247, 245, 245);
+            width: 100%;
+            max-width: 250px;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .admin-box .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            background-color: white;
+        }
+        
+        /* فونت ها */
+        @font-face {
+            font-family: 'vazir-fa';
+            src: url('./Font/Vazir-Bold.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'mj-fa';
+            src: url('./Font/Mj_Ojan.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        /* رسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            #head0 {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            #div1 {
+                margin-left: 0;
+                justify-content: center;
+            }
+            
+            #hm1 {
+                height: 50px;
+                width: 50px;
+            }
+            
+            .social-box {
+                padding: 15px;
+            }
+            
+            .btn-e {
+                font-size: 16px;
+            }
+            
+            .admin-box {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- نوار پیشرفت -->
+    <div id="progress-bar"></div>
+
+    <!-- هدر -->
+    <header class="bglight fixed-top">
+        <div id="head0" class="container">
+            <div id="div1">
+                <img id="hm1" src="./img/202 edited.jpeg" alt="Army 202 Logo">
+                <h1 style="font-family: Times New Roman, Times, serif;">Army 202</h1>
+            </div>
+        </div>
+    </header>
+<br> <bt> <bt><bt><bt></bt><br> <bt> <bt><bt><bt></bt><br> 
+<bt> <bt><bt><bt></bt><br> <bt> <bt><bt><bt></bt>
+    <!-- محتوای اصلی -->
+    <div class="main-container">
+        <!-- بخش ایتا -->
+        <div class="social-box">
+            <!-- <img class="eitaa-logo" src="./img/eitaa-logo.png" alt="Eitaa Logo"> -->
+            <img class="profile-img" src="./img/photo17716267356.jpg" alt="202 News">
+            <h4 class="h4-e">202 News</h4>
+            <p class="ph4-e">News_101@</p>
+            <a href="https://eitaa.com/News_101" class="btn-e">دنبال کنید</a>
+        </div>
+
+        <!-- بخش ادمین ها -->
+        <div class="admins-container">
+            <div class="admin-box">
+                <img class="profile-img" src="./img/image--rasanika.com.webp" alt="Admin 1">
+                <h3>ادمین 1</h3>
+                <p>علی اصغر رحیمی<br>آمار: 7</p>
+                <a href="https://eitaa.com/A2R_IM" class="btn-e">ارتباط</a>
+            </div>
+            
+            <div class="admin-box">
+                <img class="profile-img" src="./img/image--rasanika.com.webp" alt="Admin 2">
+                <h3>ادمین 2</h3>
+                <p>محمدامین عبده کریمی<br>آمار: 14</p>
+                <a href="https://eitaa.com/Amin_u" class="btn-e">ارتباط</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- لودر صفحه -->
+    <div class="page-loader">
+        <div class="page-loader-content">
+            <div class="logo-area">
+                <img src="./img/202 edited.jpeg" alt="Loading...">
+            </div>
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <script>
+        // اسکریپت نوار پیشرفت
+        function updateprogressBar() {
+            const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+            const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+        }
+        
+        window.addEventListener('scroll', updateprogressBar);
+        
+        // اسکریپت لودر
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                const loading = document.querySelector(".page-loader");
+                loading.style.opacity = '0';
+                setTimeout(() => loading.remove(), 500);
+            }, 2000);
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<br> <bt> <bt><bt><bt></bt><br> <bt> <bt><bt><bt></bt><br> 
+<bt> <bt><bt><bt></bt><br> <bt> <bt><bt><bt></bt>
+     <!-- start footer -->
+     <footer class="smal bg-light fixed-end">
+        <div class="container py-3 py-sm-1">
+            <div>
+                <hr>
+                <h4 class="container col-sm-6">ادمین های سایت:</h4>
+
+
+                
+                <ul class="wrapper">
+
+
+
+                <div>
+                    <a style="text-decoration: none; color: black;" href="https://eitaa.com/mahan_Boxing_version">
+                        <li class="icon facebook">
+                            <span class="tooltip">اجاقی</span>
+                            <!-- <img style="border-radius: 100%; height: 80px; width: 80px;" src="./img/jaghi.jpg" alt=""> -->
+                             <img style="width: 25px; height: 25px;" src="./img/admin-icon.svg" alt="">
+                        </li>                            
+                    </a>
+                    <p class="text-center"></p> اجاقی </p>
+                </div>
+
+
+                <div>
+                    <a style="text-decoration: none;" href="https://eitaa.com/AbBa002">
+                        <li class="icon Eitta">
+                            <span class="tooltip">کربلایی</span>
+                            <!-- <img style="border-radius: 100%; height: 80px; width: 80px;" src="./img/karbalaii.jpg" alt=""> -->
+                            <img style="width: 25px; height: 25px;" src="./img/admin-icon.svg" alt="">
+                      
+                        </li>                        
+                    </a>
+                    <p class="text-center"></p> کربلایی </p>
+                 
+                </div>
+<hr>
+
+                <div>
+                    <a style="text-decoration: none;" href="https://eitaa.com/H6524y">
+                        <li class="icon email">
+                            <span class="tooltip">دولتی</span>
+                            <!-- <img style="border-radius: 100%; height: 80px; width: 80px;" src="./img/dolati.jpg" alt=""> -->
+                            <img style="width: 25px; height: 25px;" src="./img/admin-icon.svg" alt="">
+                        </li>                        
+                    </a> 
+                    <p class="text-center"></p> دولتی </p>
+                </div>
+
+
+
+                </ul>
+            </div>
+            <!-- end footer -->
+</html>

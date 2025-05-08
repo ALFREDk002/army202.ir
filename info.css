@@ -1,0 +1,55 @@
+/* progress bar */
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: red;
+    z-index: 9999;
+}
+/* progress bar */
+
+header{
+    /* position: fixed; */
+    top: 0;
+    border-end-end-radius: 20px ;
+    border-end-start-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(77, 70, 70, 0.37);
+    border: 2px solid rgba(64, 53, 53, 0.18);
+
+}
+#head0{
+    display: flex;    
+}
+#div1{
+    margin-left: 108px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#div2{
+    margin-left: 17px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+}
+#s1{
+    margin-top: -4px;
+}
+#div3{
+    margin-top: 8px;
+}
+#hm1{
+    height: 78px;
+    width: 102px;
+    border-radius: 50%;
+    /* margin-right: 20px; */
+}
+#a1{
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+}
+#a1a{
+    margin-top: 50px;
+}

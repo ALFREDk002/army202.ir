@@ -1,0 +1,214 @@
+/* progress bar */
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: red;
+    z-index: 9999;
+}
+/* progress bar */
+
+header{
+    /* position: fixed; */
+    top: 0;
+    border-end-end-radius: 20px ;
+    border-end-start-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(77, 70, 70, 0.37);
+    border: 2px solid rgba(64, 53, 53, 0.18);
+
+}
+#head0{
+    display: flex;    
+}
+#div1{
+    margin-left: 108px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#div2{
+    margin-left: 17px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+}
+#s1{
+    margin-top: -4px;
+}
+#div3{
+    margin-top: 8px;
+}
+#hm1{
+    height: 78px;
+    width: 102px;
+    border-radius: 50%;
+    /* margin-right: 20px; */
+}
+#a1{
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* START */
+/* container-col-sm-6 DIV */
+@font-face {
+    font-family: 'vazir-fa';
+    src: url('./Font/Vazir-Bold.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0600â€“06FF;
+    }
+    @font-face {
+        font-family: 'mj-fa';
+        src: url('./Font/Mj_Ojan.ttf'); 
+        font-weight: normal;
+        font-style: normal;
+        unicode-range: U+0600â€“06FF;
+        }
+.E-mail{
+    position: relative;
+    top: 20px;
+    left: -600px;
+}
+.container-col-sm-6{
+    background-color: rgb(247, 245, 245);
+    width: 500px;
+    height: 200px;
+    border-radius: 25px;
+position: relative;
+ top: 100px;
+
+box-shadow:  6px 5px 5px 3px rgba(0, 0, 0, 0.377);
+}
+.img-e{
+    width: 110px;
+    position: relative;
+    top:-50px;
+    left: -190px;
+    background-color: rgb(224, 101, 0);
+    border-radius: 200px;
+}
+.ac-e{
+    border-radius: 200px;
+    position: relative;
+    top: -70px;
+    left: -70px;
+}
+.h4-e{
+    position: relative;
+    top: -125px;
+    left: 20px;
+    font-size: 22px;
+    font-family: 'vazir-fa';
+}
+.ph4-e{
+    position: relative;
+    top: -159px;
+    left: 15px;
+}
+.btn-e {
+    font-family: 'vazir-fa';
+     width: 200px;
+     height: 35px;
+     position: relative;
+     top: -133px;
+     border-radius: 20px;
+     background: rgb(224, 101, 0);
+     width: 300px;
+     color: white;
+     font-size: 20px;
+     border: 0px;
+ 
+transition-property: background-color position;
+transition-duration: 0.5s;
+}
+.btn-e:hover{
+    background-color: rgb(247, 245, 245);
+    color: black;
+}
+.ads1{
+    background-color: rgb(247, 245, 245);
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow:  6px 5px 5px 3px rgba(0, 0, 0, 0.377);
+    position:relative;
+    left: -295px;
+    
+}
+.ads2{
+    background-color: rgb(247, 245, 245);
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow:  3px 3px 3px 3px rgba(0, 0, 0, 0.377);
+    position:relative;
+    left: -570px;
+    top: -250px;
+}
+.ads1-prof{
+    width: 110px;
+    position: relative;
+    top:-50px;
+    left: -70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 200px;
+}
+.ads2-prof{
+    width: 110px;
+    position: relative;
+    top:-50px;
+    left: -70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 200px;
+}
+.ads1-name{
+  position: relative;
+  top: -40px;
+  font-family: 'vazir-fa';
+}
+.ads2-name{
+    position: relative;
+    top: -40px;
+    font-family: 'vazir-fa';
+}
+.ads1-btn{
+    position: relative;
+    top: -20px;
+    width: 150px;
+    border-radius: 20px;
+     color: white;
+     border: 0px;
+     font-size: 20px;
+     background-color: rgb(224, 101, 0);
+     font-family: 'vazir-fa';
+     transition-property: color background-color position;
+transition-duration: 0.5s;
+}
+.ads1-btn:hover{
+    background-color: rgb(247, 245, 245);
+    
+    color: black;
+}
+.ads2-btn{
+    position: relative;
+    top: -20px;
+    width: 150px;
+    border-radius: 20px;
+     color: white;
+     border: 0px;
+     font-size: 20px;
+     background-color: rgb(224, 101, 0);
+     font-family: 'vazir-fa';
+     transition-property: color background-color position ;
+transition-duration: 0.5s;
+}
+.ads2-btn:hover{
+    background-color: rgb(247, 245, 245);
+ 
+    color: black;
+}
+/* END */
